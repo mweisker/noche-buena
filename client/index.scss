@@ -1,14 +1,22 @@
 body {
-  background-color: rgba(53, 150, 53, 0.407);
-}
-
-.gif {
-  // background-image: url('./img/room-background.png');
+  // background-color: rgba(53, 150, 53, 0.407);
+  background-image: url('./img/nocheBuena.png');
   background-position: center;
   background-repeat: no-repeat; 
   background-size: cover; 
-  width: 60vw;
-  height: 60vw;
-  border: 1px dashed black;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  border: 1px solid red;
 }
+
+// .gif {
+//   background-image: url('./img/room-background.png');
+//   background-position: center;
+//   background-repeat: no-repeat; 
+//   background-size: cover; 
+//   width: 60vw;
+//   height: 60vw;
+//   border: 1px dashed black;
+// }
 
