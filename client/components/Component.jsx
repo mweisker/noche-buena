@@ -8,6 +8,7 @@ export default function Component() {
     <>
       <h3>And I'm a silly little component</h3>
       {/* <img src={Ambiance} /> */}
+      <div className='background'></div>
 
     </>
   )

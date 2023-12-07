@@ -8,11 +8,11 @@ import Home from './path/Home.jsx';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Routes>
         <Route path='/' element={ <Home />} />
       </Routes>
-    </div>
+    </>
   )
 }
 
