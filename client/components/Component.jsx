@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 import Ambiance from '../img/nocheBuena.png';
-export default function Component() {
+export default function Component({ name }) {
 
 
   return (
     <>
-      <h3>And I'm a silly little component</h3>
-      {/* <img src={Ambiance} /> */}
-      <div className='background'></div>
-
+      <div className='name-holder'>
+        <h3>{ name }</h3>
+      </div>
     </>
   )
 }
