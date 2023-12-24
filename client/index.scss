@@ -54,6 +54,13 @@ html {
 .title {
   text-align: center;
   color: yellow;
+  font-size: 10vw;
+  position: relative;
+  top: -4vw;
+}
+
+.title:hover {
+  cursor: pointer;
 }
 
 .spinning-square {
@@ -122,7 +129,7 @@ html {
   z-index: 5;
   position: absolute;
   left: 0%;
-  top: 20%;
+  top: 025%;
   // bottom: -50%;
   right: 0%;
   margin: auto;

@@ -42,9 +42,10 @@ export default function Home() {
 
   return (
     <div className='home'>
-      <h1 className='title'>Noche Buena</h1>
-      <button onClick={() => randomize(participants)}>Do the shuffle</button>
+      <h1 onClick={() => randomize(participants)} className='title'>Noche Buena</h1>
+      {/* <button onClick={() => randomize(participants)}>Do the shuffle</button> */}
       {/* <Component/> */}
+
       {initialized ? 
       (
         // participants.map(name => (
