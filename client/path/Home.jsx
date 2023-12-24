@@ -61,25 +61,36 @@ export default function Home() {
                 <div className='shrinking bottom matt'>Matt</div>
                 <div className='shrinking bottom ana'>Ana</div>
               </div>
-              <ul  className='list-holder' {...provided.droppableProps} ref={provided.innerRef}>
-                {participants.map((name, index) => (
-                  <Draggable key={name} draggableId={name} index={index}>
-                    {(provided) => (
-                      <div className='name-holder'>
-                        <li
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                        >
-                          {name}
-                        </li>
+                <ul  className='ul-list-holder' {...provided.droppableProps} ref={provided.innerRef}>
+                  <div className='holder'>
+                    {participants.map((name, index) => (
+                      <div className='list-holder'>
+                        <Draggable key={name} draggableId={name} index={index}>
+                          {(provided) => (
+                            <div className={`name-holder name-${index}`}>
+                              <li
+                                ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                              >
+                                {name}
+                              </li>
+                            </div>
+                            
+                          )}
+                        </Draggable>
+                        {index !== 4 ? (
+                          <img className='arrow-down' src='https://www.freeiconspng.com/thumbs/arrow-down-icon-png/red-arrow-down-icon-png-30.png'></img>
+                        ) : (
+                          null
+                        )}
                       </div>
                       
-                    )}
-                  </Draggable>
-                ))}
-                {provided.placeholder}
-              </ul>
+                    ))}
+                    <img className='arrow-up' src='https://static.vecteezy.com/system/resources/previews/017/178/086/non_2x/directional-arrow-on-transparent-background-free-png.png'></img>
+                  </div>
+                  {provided.placeholder}
+                </ul>
             </div>
           )}
         </Droppable>
