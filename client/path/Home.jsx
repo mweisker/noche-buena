@@ -7,7 +7,7 @@ import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import Component from '../components/Component.jsx';
 
 export default function Home() {
-  const [participants, setParticipants] = useState(['Dad', 'Mom', 'Chris', 'Efrain', 'Matt', 'Ana'])
+  const [participants, setParticipants] = useState(['Dad', 'Mom', 'Chris', 'Matt', 'Ana'])
   const [initialized, setInitialized] = useState(false)
 
   // const navigate = useNavigate();
@@ -54,7 +54,14 @@ export default function Home() {
         <Droppable droppableId="reorderable-list">
           {(provided) => (
             <div>
-              <ul {...provided.droppableProps} ref={provided.innerRef}>
+              <div className='spinning-square'>
+                <div className='shrinking top dad'>Dad</div>
+                <div className='shrinking top mom'>Mom</div>
+                <div className='shrinking top chris'>Chris</div>
+                <div className='shrinking bottom matt'>Matt</div>
+                <div className='shrinking bottom ana'>Ana</div>
+              </div>
+              <ul  className='list-holder' {...provided.droppableProps} ref={provided.innerRef}>
                 {participants.map((name, index) => (
                   <Draggable key={name} draggableId={name} index={index}>
                     {(provided) => (
